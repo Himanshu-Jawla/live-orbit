@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cosmos Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="solar-system">
+    <div class="sun"></div>
+
+    <!-- Planets -->
+    <div class="orbit mercury-orbit">
+      <div class="planet mercury" data-name="Mercury" data-fact="Mercury is the smallest planet and closest to the Sun."></div>
+    </div>
+    <div class="orbit venus-orbit">
+      <div class="planet venus" data-name="Venus" data-fact="Venus is the hottest planet, with thick toxic clouds."></div>
+    </div>
+    <div class="orbit earth-orbit">
+      <div class="planet earth" data-name="Earth" data-fact="Earth is the only planet known to support life.">
+        <div class="moon-orbit">
+          <div class="moon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="orbit mars-orbit">
+      <div class="planet mars" data-name="Mars" data-fact="Mars is called the Red Planet and might have hosted water."></div>
+    </div>
+    <div class="orbit jupiter-orbit">
+      <div class="planet jupiter" data-name="Jupiter" data-fact="Jupiter is the largest planet and has a Great Red Spot storm."></div>
+    </div>
+    <div class="orbit saturn-orbit">
+      <div class="planet saturn" data-name="Saturn" data-fact="Saturn has the most spectacular ring system."></div>
+    </div>
+    <div class="orbit uranus-orbit">
+      <div class="planet uranus" data-name="Uranus" data-fact="Uranus rotates on its side, unlike any other planet."></div>
+    </div>
+    <div class="orbit neptune-orbit">
+      <div class="planet neptune" data-name="Neptune" data-fact="Neptune is the windiest planet in the solar system."></div>
+    </div>
+  </div>
+
+  <!-- Info panel -->
+  <div class="info-panel" id="infoPanel">
+    <h2 id="planetName"></h2>
+    <p id="planetFact"></p>
+    <button id="closeBtn">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

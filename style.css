@@ -5,7 +5,7 @@
 }
 
 body {
-  background: radial-gradient(circle at center, #0a0a2a, #000);
+  background: radial-gradient(circle at center, #050517, #000);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -17,21 +17,21 @@ body {
 
 .solar-system {
   position: relative;
-  width: 900px;
-  height: 900px;
+  width: 950px;
+  height: 950px;
 }
 
 /* Sun */
 .sun {
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, #ffcc00, #ff6600);
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, #ffec99, #ff6600);
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 80px 30px rgba(255, 165, 0, 0.8);
+  box-shadow: 0 0 100px 40px rgba(255, 200, 50, 0.8);
 }
 
 /* Orbits */
@@ -39,7 +39,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: rotate linear infinite;
@@ -54,7 +54,7 @@ body {
 .uranus-orbit  { width: 800px; height: 800px; animation-duration: 44s; }
 .neptune-orbit { width: 900px; height: 900px; animation-duration: 52s; }
 
-/* Planets */
+/* Planets - glowing bulbs */
 .planet {
   border-radius: 50%;
   position: absolute;
@@ -63,27 +63,23 @@ body {
   transform: translate(-50%, -50%);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
 }
 
-.planet:hover {
-  transform: scale(1.4) translate(-50%, -50%);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
-}
-
-.mercury { width: 15px; height: 15px; background: gray; }
-.venus   { width: 22px; height: 22px; background: #d4a373; }
-.earth   { width: 24px; height: 24px; background: #1e90ff; }
-.mars    { width: 20px; height: 20px; background: #c1440e; }
-.jupiter { width: 55px; height: 55px; background: #d6b77a; }
-.saturn  { width: 45px; height: 45px; background: #deb887; }
-.uranus  { width: 35px; height: 35px; background: #5f9ea0; }
-.neptune { width: 34px; height: 34px; background: #4169e1; }
+.mercury { width: 18px; height: 18px; background: radial-gradient(circle, #bbb, #666); box-shadow: 0 0 20px #aaa; }
+.venus   { width: 26px; height: 26px; background: radial-gradient(circle, #ffdead, #d4a373); box-shadow: 0 0 25px #e6c07a; }
+.earth   { width: 28px; height: 28px; background: radial-gradient(circle, #6ab7ff, #1e3f91); box-shadow: 0 0 25px #4fa3ff; }
+.mars    { width: 22px; height: 22px; background: radial-gradient(circle, #ff6f61, #8b2c20); box-shadow: 0 0 25px #ff4f42; }
+.jupiter { width: 65px; height: 65px; background: radial-gradient(circle, #f4e1c1, #c2934f); box-shadow: 0 0 40px #e2b778; }
+.saturn  { width: 55px; height: 55px; background: radial-gradient(circle, #f8deb2, #b88b4a); box-shadow: 0 0 35px #e1bb70; }
+.uranus  { width: 42px; height: 42px; background: radial-gradient(circle, #a6f6ff, #298a9c); box-shadow: 0 0 30px #5bd3e8; }
+.neptune { width: 40px; height: 40px; background: radial-gradient(circle, #7aa2ff, #1f2f80); box-shadow: 0 0 30px #4d6aff; }
 
 /* Moon */
 .moon-orbit {
   width: 40px;
   height: 40px;
-  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -93,14 +89,15 @@ body {
 }
 
 .moon {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: #ddd;
+  background: radial-gradient(circle, #fff, #999);
   position: absolute;
   top: 50%;
   left: 0%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px #fff;
 }
 
 /* Rotation */
@@ -128,17 +125,9 @@ body {
   transform: translateX(-50%) scale(1);
 }
 
-#closeBtn {
-  margin-top: 15px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  background: #ff6600;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
+.info-panel h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #ffcc66;
 }
 
-#closeBtn:hover {
-  background: #ff3300;
-}
